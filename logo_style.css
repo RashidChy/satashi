@@ -1,0 +1,53 @@
+   .shine {
+      width: 250px;
+      text-decoration: none;
+      text-align: center;
+      background: #7788b5b1;
+      padding: 15px 0;
+      border-radius: 50px 10px;
+      color: lavender;
+      transition: all ease 0.2s;
+      -webkit-box-shadow: 2px 3px 2px 0px rgba(0, 0, 0, 0.17);
+      -moz-box-shadow: 2px 3px 2px 0px rgba(0, 0, 0, 0.17);
+      box-shadow: 2px 3px 2px 0px rgba(0, 0, 0, 0.17);
+      transition: all ease 0.2s;
+      position: relative;
+      overflow: hidden;
+      /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; */
+      font-weight: 500;
+      border: none;
+      font-size: 30px;
+    }
+    
+    
+    .shine::after {
+      content: "";
+      width: 30px;
+      height: 200px;
+      position: absolute;
+      left: -20px;
+      top: 0;
+      margin-top: -20px;
+      background: rgb(218, 234, 255);
+      opacity: 0.6;
+      filter: blur(20px);
+      animation: login-blur 3s infinite;
+      animation-delay: 0s;
+      transform-origin: top;
+    }
+    
+    @keyframes login-blur {
+      from {
+        transform: translate(0) rotate(45deg);
+      }
+      to {
+        transform: translateX(370px) rotate(45deg);
+      }
+    }
+    
+    /* hover event, delete if you dont need it*/
+    .shine:hover {
+      transform: translateY(-5px);
+      color: rgba(176, 176, 176, 0.619);
+      cursor: pointer;
+    }
